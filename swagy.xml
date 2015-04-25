@@ -17,17 +17,33 @@
                   </block>
                 </value>
                 <next>
-                  <block type="oled_color" id="110">
-                    <field name="OBJECT">GREEN</field>
+                  <block type="movement_reverse" id="180">
                     <next>
-                      <block type="robot_delay" id="37" inline="true">
+                      <block type="robot_delay" id="209" inline="true">
                         <value name="DELAY">
-                          <block type="math_number" id="58">
+                          <block type="math_number" id="216">
                             <field name="NUM">2000</field>
                           </block>
                         </value>
                         <next>
-                          <block type="movement_stop" id="170"></block>
+                          <block type="movement_left" id="191">
+                            <next>
+                              <block type="robot_delay" id="233" inline="true">
+                                <value name="DELAY">
+                                  <block type="math_number" id="240">
+                                    <field name="NUM">2000</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="movement_reverse" id="251">
+                                    <next>
+                                      <block type="movement_stop" id="268"></block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
                         </next>
                       </block>
                     </next>
