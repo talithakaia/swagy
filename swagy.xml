@@ -1,58 +1,13 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_forward" id="11" x="218" y="65">
+  <block type="movement_leftmotor" id="282" inline="true" x="222" y="105">
+    <value name="MOVLEFT">
+      <block type="sensor_button" id="299">
+        <field name="OBJECT">UP</field>
+      </block>
+    </value>
     <next>
-      <block type="robot_delay" id="27" inline="true">
-        <value name="DELAY">
-          <block type="math_number" id="44">
-            <field name="NUM">2000</field>
-          </block>
-        </value>
-        <next>
-          <block type="movement_stutter" id="68">
-            <next>
-              <block type="robot_delay" id="29" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="117">
-                    <field name="NUM">2000</field>
-                  </block>
-                </value>
-                <next>
-                  <block type="movement_reverse" id="180">
-                    <next>
-                      <block type="robot_delay" id="209" inline="true">
-                        <value name="DELAY">
-                          <block type="math_number" id="216">
-                            <field name="NUM">2000</field>
-                          </block>
-                        </value>
-                        <next>
-                          <block type="movement_left" id="191">
-                            <next>
-                              <block type="robot_delay" id="233" inline="true">
-                                <value name="DELAY">
-                                  <block type="math_number" id="240">
-                                    <field name="NUM">2000</field>
-                                  </block>
-                                </value>
-                                <next>
-                                  <block type="movement_reverse" id="251">
-                                    <next>
-                                      <block type="movement_stop" id="268"></block>
-                                    </next>
-                                  </block>
-                                </next>
-                              </block>
-                            </next>
-                          </block>
-                        </next>
-                      </block>
-                    </next>
-                  </block>
-                </next>
-              </block>
-            </next>
-          </block>
-        </next>
+      <block type="oled_linerect" id="292">
+        <field name="OBJECT">RECT</field>
       </block>
     </next>
   </block>
