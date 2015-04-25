@@ -1,13 +1,19 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_leftmotor" id="282" inline="true" x="222" y="105">
-    <value name="MOVLEFT">
-      <block type="sensor_button" id="299">
-        <field name="OBJECT">UP</field>
-      </block>
-    </value>
+  <block type="movement_forward" id="310" x="238" y="119">
     <next>
-      <block type="oled_linerect" id="292">
-        <field name="OBJECT">RECT</field>
+      <block type="robot_delay" id="352" inline="true">
+        <value name="DELAY">
+          <block type="math_number" id="362">
+            <field name="NUM">50</field>
+          </block>
+        </value>
+        <next>
+          <block type="movement_forward" id="349">
+            <next>
+              <block type="movement_stop" id="380"></block>
+            </next>
+          </block>
+        </next>
       </block>
     </next>
   </block>
